@@ -30,8 +30,8 @@ export function Header() {
           ))}
         </nav>
 
-        <CTAButton href="#start" className="hidden md:inline-flex">
-          Get started
+        <CTAButton href="#book" className="hidden md:inline-flex">
+          Book a session
         </CTAButton>
       </Container>
     </header>

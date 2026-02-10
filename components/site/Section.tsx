@@ -1,17 +1,17 @@
-import type { ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { Container } from "@/components/site/Container";
+import type { HTMLAttributes, ReactNode } from "react";
 
-interface SectionProps {
+import { Container } from "@/components/site/Container";
+import { cn } from "@/lib/utils";
+
+interface SectionProps extends HTMLAttributes<HTMLElement> {
   children: ReactNode;
-  className?: string;
   containerClassName?: string;
   muted?: boolean;
 }
 
-export function Section({ children, className, containerClassName, muted }: SectionProps) {
+export function Section({ children, className, containerClassName, muted, ...props }: SectionProps) {
   return (
-    <section className={cn("py-14 md:py-20", muted && "bg-muted/40", className)}>
+    <section className={cn("py-14 md:py-20", muted && "bg-muted/40", className)} {...props}>
       <Container className={containerClassName}>{children}</Container>
     </section>
   );
