@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 33% 99%;
+  --foreground: 220 19% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 220 19% 15%;
+  --primary: 173 40% 31%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 225 33% 36%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 210 25% 96%;
+  --muted-foreground: 219 15% 40%;
+  --accent: 173 35% 94%;
+  --accent-foreground: 220 19% 15%;
+  --border: 214 21% 90%;
+  --input: 214 21% 90%;
+  --ring: 173 40% 31%;
+  --radius: 0.9rem;
+}
+
+.dark {
+  --background: 220 20% 8%;
+  --foreground: 210 20% 96%;
+  --card: 222 21% 11%;
+  --card-foreground: 210 20% 96%;
+  --primary: 173 36% 46%;
+  --primary-foreground: 220 25% 10%;
+  --secondary: 224 27% 31%;
+  --secondary-foreground: 210 20% 96%;
+  --muted: 223 20% 16%;
+  --muted-foreground: 215 20% 70%;
+  --accent: 223 20% 16%;
+  --accent-foreground: 210 20% 96%;
+  --border: 223 18% 24%;
+  --input: 223 18% 24%;
+  --ring: 173 36% 46%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight text-foreground;
+  }
+}
